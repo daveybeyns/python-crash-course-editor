@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Python Try It Editor</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="practice-card" aria-labelledby="activity-title">
+        <header class="activity-header">
+            <div>
+                <p class="eyebrow">TRY IT</p>
+                <h1 id="activity-title">Variables, Data Types, Input &amp; Casting</h1>
+            </div>
+            <div id="python-status" class="status-pill status-loading" role="status" aria-live="polite">
+                Loading Python…
+            </div>
+        </header>
+
+        <section class="task-panel" aria-labelledby="task-label">
+            <div class="task-row">
+                <label id="task-label" for="task-select">Practice task</label>
+                <select id="task-select" aria-describedby="task-instruction"></select>
+            </div>
+            <p id="task-instruction" class="task-instruction"></p>
+        </section>
+
+        <section class="editor-panel" aria-label="Python code editor">
+            <div id="code-editor" aria-label="Python code editor"></div>
+        </section>
+
+        <section class="control-bar" aria-label="Editor controls">
+            <button id="run-button" class="button button-primary" type="button" disabled>
+                <span aria-hidden="true">▶</span> Run
+            </button>
+            <button id="stop-button" class="button button-stop" type="button" hidden>
+                <span aria-hidden="true">■</span> Stop
+            </button>
+            <button id="check-button" class="button button-dark" type="button" disabled>
+                <span aria-hidden="true">✓</span> Check
+            </button>
+            <button id="reset-button" class="button button-light" type="button">
+                <span aria-hidden="true">↺</span> Reset
+            </button>
+            <button id="hint-button" class="button button-light" type="button" aria-expanded="false">
+                <span aria-hidden="true">💡</span> Hint
+            </button>
+        </section>
+
+        <section id="feedback-panel" class="feedback-panel" role="status" aria-live="polite" hidden></section>
+
+        <section id="hint-panel" class="hint-panel" hidden>
+            <div>
+                <strong>Hint:</strong>
+                <span id="hint-text"></span>
+            </div>
+            <button id="solution-button" class="text-button" type="button" disabled>Show solution</button>
+            <pre id="solution-code" class="solution-code" hidden></pre>
+            <p id="solution-locked" class="solution-locked">Run or check your code once to unlock the solution.</p>
+        </section>
+
+        <section class="terminal-panel" aria-labelledby="terminal-title">
+            <div class="terminal-header">
+                <span id="terminal-title">TERMINAL</span>
+                <button id="clear-terminal-button" class="terminal-clear" type="button">Clear</button>
+            </div>
+            <div id="terminal-output" class="terminal-output" role="log" aria-live="polite" aria-label="Program output"></div>
+        </section>
+
+        <p class="privacy-note">Python runs in this browser. Code and answers are not sent to Moodle or GitHub.</p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.44.0/src-min-noconflict/ace.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
