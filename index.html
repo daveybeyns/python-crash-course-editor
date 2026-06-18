@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light">
-    <title>Python Try It Editor</title>
-
+    <title>Python Coding Lab</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main class="practice-card" aria-labelledby="activity-title">
         <header class="activity-header">
-            <div>
-                <p class="eyebrow">TRY IT</p>
-                <h1 id="activity-title">Variables, Data Types, Input &amp; Casting</h1>
+            <div class="header-identity">
+                <span class="try-badge">TRY IT</span>
+                <div class="header-copy">
+                    <p class="lab-label">PYTHON CODING LAB</p>
+                    <h1 id="activity-title">Variables, Data Types, Input &amp; Casting</h1>
+                </div>
             </div>
             <div id="python-status" class="status-pill status-loading" role="status" aria-live="polite">
                 Loading Python…
@@ -22,31 +24,38 @@
 
         <section class="task-panel" aria-labelledby="task-label">
             <div class="task-row">
-                <label id="task-label" for="task-select">Practice task</label>
+                <div class="task-label-wrap">
+                    <span class="task-kicker">PRACTICE TASK</span>
+                    <label id="task-label" for="task-select">Choose an activity</label>
+                </div>
                 <select id="task-select" aria-describedby="task-instruction"></select>
             </div>
             <p id="task-instruction" class="task-instruction"></p>
         </section>
 
         <section class="editor-panel" aria-label="Python code editor">
+            <div class="editor-tabbar" aria-hidden="true">
+                <span class="editor-tab"><span class="python-file-icon">Py</span> practice.py</span>
+                <span class="editor-shortcut">Ctrl + Enter to run</span>
+            </div>
             <div id="code-editor" aria-label="Python code editor"></div>
         </section>
 
         <section class="control-bar" aria-label="Editor controls">
-            <button id="run-button" class="button button-primary" type="button" disabled>
+            <button id="run-button" class="button button-run" type="button" disabled>
                 <span aria-hidden="true">▶</span> Run
             </button>
             <button id="stop-button" class="button button-stop" type="button" hidden>
                 <span aria-hidden="true">■</span> Stop
             </button>
-            <button id="check-button" class="button button-dark" type="button" disabled>
+            <button id="check-button" class="button button-check" type="button" disabled>
                 <span aria-hidden="true">✓</span> Check
             </button>
-            <button id="reset-button" class="button button-light" type="button">
+            <button id="reset-button" class="button button-reset" type="button">
                 <span aria-hidden="true">↺</span> Reset
             </button>
-            <button id="hint-button" class="button button-light" type="button" aria-expanded="false">
-                <span aria-hidden="true">💡</span> Hint
+            <button id="hint-button" class="button button-hint" type="button" aria-expanded="false">
+                <span aria-hidden="true">◆</span> Hint
             </button>
         </section>
 
@@ -64,13 +73,13 @@
 
         <section class="terminal-panel" aria-labelledby="terminal-title">
             <div class="terminal-header">
-                <span id="terminal-title">TERMINAL</span>
+                <span id="terminal-title"><span class="terminal-prompt" aria-hidden="true">&gt;_</span> TERMINAL</span>
                 <button id="clear-terminal-button" class="terminal-clear" type="button">Clear</button>
             </div>
             <div id="terminal-output" class="terminal-output" role="log" aria-live="polite" aria-label="Program output"></div>
         </section>
 
-        <p class="privacy-note">Python runs in this browser. Code and answers are not sent to Moodle or GitHub.</p>
+        <p class="privacy-note">Runs privately in this browser — code and answers are not sent to Moodle or GitHub.</p>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.44.0/src-min-noconflict/ace.js"></script>

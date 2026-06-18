@@ -25,7 +25,7 @@ print(score)`,
     {
         id: "data-types",
         title: "2. Data Types",
-        instruction: "Complete the variables using a string, integer, float and Boolean.  The data should be for someone with the name Aisha who is 17 years old, 1.68 tall and is enrolled.",
+        instruction: "Complete the variables using a string, integer, float and Boolean.",
         starter: `# Complete the four variables
 name =
 age =

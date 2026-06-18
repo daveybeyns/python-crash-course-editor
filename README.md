@@ -6,6 +6,7 @@ A compact Python practice editor for embedding in Moodle with GitHub Pages.
 
 - One editor containing five practice tasks
 - Variables, data types, input, casting and combined practice
+- Distinct Coding Lab appearance with a charcoal header and neutral workspace
 - Python syntax highlighting
 - Terminal-style `input()` inside the output panel
 - Run, Stop, Check, Reset, Hint and Solution controls
@@ -17,7 +18,7 @@ A compact Python practice editor for embedding in Moodle with GitHub Pages.
 ## Files
 
 - `index.html` – page structure
-- `styles.css` – NPTC and VS Code Dark+ styling
+- `styles.css` – Coding Lab styling with NPTC accents and VS Code Dark+
 - `app.js` – tasks, editor controls and checking
 - `python-worker.js` – Pyodide Python runner
 - `moodle-embed.html` – iframe block to paste into Moodle
@@ -34,7 +35,7 @@ A compact Python practice editor for embedding in Moodle with GitHub Pages.
 8. GitHub will publish the page at an address similar to:
    `https://YOUR-GITHUB-USERNAME.github.io/python-crash-course-editor/`
 
-Refresh the GitHub Pages settings page to see the published address once deployment completes.
+The first publication can take a short while to appear. Refresh the GitHub Pages settings page to see the published address.
 
 ## Test before using Moodle
 
@@ -96,6 +97,6 @@ Add new simple variables that need checking to the `SNAPSHOT_NAMES` list in `app
 The page loads:
 
 - Pyodide 0.29.4 from jsDelivr
-- Ace 1.44.0 from jsDelivr
+- CodeMirror 5.65.20 from cdnjs
 
 Students therefore need internet access when the editor loads.
