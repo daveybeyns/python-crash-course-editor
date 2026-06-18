@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light">
+    <meta name="robots" content="noindex, nofollow, noarchive">
     <title>Python Coding Lab</title>
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <main class="practice-card" aria-labelledby="activity-title">
         <header class="activity-header">
-            <div>
-                <p class="eyebrow">TRY IT</p>
-                <h1 id="activity-title">Python Coding Lab</h1>
+            <div class="header-identity">
+                <span class="try-badge">TRY IT</span>
+                <div class="header-copy">
+                    <p class="lab-label">PYTHON CODING LAB</p>
+                    <h1 id="activity-title">Practice Python in your browser</h1>
+                </div>
             </div>
             <div id="python-status" class="status-pill status-loading" role="status" aria-live="polite">
                 Loading Python…
@@ -22,30 +25,37 @@
 
         <section class="task-panel" aria-labelledby="task-label">
             <div class="task-row">
-                <label id="task-label" for="task-select">Practice task</label>
+                <div class="task-label-wrap">
+                    <span class="task-kicker">TASK</span>
+                    <label id="task-label" for="task-select">Practice task</label>
+                </div>
                 <select id="task-select" aria-describedby="task-instruction"></select>
             </div>
             <p id="task-instruction" class="task-instruction"></p>
         </section>
 
         <section class="editor-panel" aria-label="Python code editor">
+            <div class="editor-tabbar">
+                <span class="editor-tab"><span class="python-file-icon">PY</span> practice.py</span>
+                <span class="editor-shortcut">Run: Ctrl + Enter</span>
+            </div>
             <div id="code-editor" aria-label="Python code editor"></div>
         </section>
 
         <section class="control-bar" aria-label="Editor controls">
-            <button id="run-button" class="button button-primary" type="button" disabled>
+            <button id="run-button" class="button button-run" type="button" disabled>
                 <span aria-hidden="true">▶</span> Run
             </button>
             <button id="stop-button" class="button button-stop" type="button" hidden>
                 <span aria-hidden="true">■</span> Stop
             </button>
-            <button id="check-button" class="button button-dark" type="button" disabled>
+            <button id="check-button" class="button button-check" type="button" disabled>
                 <span aria-hidden="true">✓</span> Check
             </button>
-            <button id="reset-button" class="button button-light" type="button">
+            <button id="reset-button" class="button button-reset" type="button">
                 <span aria-hidden="true">↺</span> Reset
             </button>
-            <button id="hint-button" class="button button-light" type="button" aria-expanded="false">
+            <button id="hint-button" class="button button-hint" type="button" aria-expanded="false">
                 <span aria-hidden="true">💡</span> Hint
             </button>
         </section>
@@ -64,7 +74,7 @@
 
         <section class="terminal-panel" aria-labelledby="terminal-title">
             <div class="terminal-header">
-                <span id="terminal-title">TERMINAL</span>
+                <span id="terminal-title"><span class="terminal-prompt">›_</span> TERMINAL</span>
                 <button id="clear-terminal-button" class="terminal-clear" type="button">Clear</button>
             </div>
             <div id="terminal-output" class="terminal-output" role="log" aria-live="polite" aria-label="Program output"></div>
@@ -74,6 +84,6 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.44.0/src-min-noconflict/ace.js"></script>
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
