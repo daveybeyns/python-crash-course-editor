@@ -510,8 +510,7 @@ for multiplier in range(1, 11):
 
 
 const STORAGE_PREFIX = "nptc-python-practice-v1:";
-const SNAPSHOT_NAMES = ["score", "name", "age", "height", "enrolled", "course", "number", "mark", "first_number", "second_number", "password"];
-
+const SNAPSHOT_NAMES = ["score", "name", "age", "height", "enrolled", "course", "number", "mark", "first_number", "second_number", "password", "count", "total", "table_number", "multiplier"];
 const elements = {
     taskSelect: document.getElementById("task-select"),
     taskInstruction: document.getElementById("task-instruction"),
